@@ -25,11 +25,14 @@ export const createUserSerivce = async (
 
     if (user) {
       const privateKey = fs.readFileSync(
-        path.resolve(__dirname, "../config/private_key.pem")
+        path.resolve(__dirname, "../config/jwtRS256.key")
       );
+
       const token = jwt.sign({ userId: user.id }, privateKey, {
-        expiresIn: "1h",
+        expiresIn: "1hr",
+        algorithm: "RS256",
       });
+
       res.json({ token });
     }
   } catch (error) {
@@ -57,10 +60,11 @@ export const userLoginService = async (
       }
 
       const privateKey = fs.readFileSync(
-        path.resolve(__dirname, "../config/private_key.pem")
+        path.resolve(__dirname, "../config/jwtRS256.key")
       );
       const token = jwt.sign({ userId: user.id }, privateKey, {
-        expiresIn: "1h",
+        expiresIn: "1hr",
+        algorithm: "RS256",
       });
 
       res.json({ token });

@@ -1,10 +1,14 @@
 import { Router } from "express";
 
-import { getPostController } from "../controller/postController";
+import {
+  getPostsController,
+  getPostController,
+} from "../controller/postController";
 import { authenticateToken } from "../middleware/auth";
 
 const router = Router();
 
-router.get("/posts", authenticateToken, getPostController);
+router.get("/posts", authenticateToken, getPostsController);
+router.get("/post", authenticateToken, getPostController);
 
 export default router;

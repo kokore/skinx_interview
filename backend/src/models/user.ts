@@ -30,7 +30,12 @@ export const createUser = async (
 export const findUserByUsername = async (
   username: string
 ): Promise<UserAccount | null> => {
-  return prisma.user.findUnique({
-    where: { username },
-  });
+  try {
+    return prisma.user.findUnique({
+      where: { username },
+    });
+  } catch (error) {
+    console.error("Error find user:", error);
+    return null;
+  }
 };

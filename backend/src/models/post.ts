@@ -16,11 +16,23 @@ export interface PostsRequest {
 export interface PostResponse {
   id: number;
   title: string;
-  content: string;
-  postedAt: Date;
-  postedBy: string;
   tags: Tag[];
 }
+
+export const getPost = async (id: number): Promise<PostResponse | null> => {
+  try {
+    const post = await prisma.post.findUnique({
+      where: { id },
+      include: {
+        tags: true,
+      },
+    });
+    return post;
+  } catch (error) {
+    console.error("Error fetching posts:", error);
+    return null;
+  }
+};
 
 export const getPosts = async (
   query: PostsRequest
@@ -36,6 +48,16 @@ export const getPosts = async (
 
   try {
     const posts = await prisma.post.findMany({
+      select: {
+        id: true,
+        title: true,
+        tags: {
+          select: {
+            id: true,
+            tag_name: true,
+          },
+        },
+      },
       skip: (parseInt(page as string) - 1) * parseInt(pageSize as string),
       take: parseInt(pageSize as string),
       where: {
@@ -65,9 +87,6 @@ export const getPosts = async (
       },
       orderBy: {
         [sortBy as string]: orderBy,
-      },
-      include: {
-        tags: true,
       },
     });
 
