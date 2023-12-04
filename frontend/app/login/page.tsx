@@ -3,13 +3,13 @@
 // @ts-ignore
 import { useFormState } from "react-dom";
 
-import { login } from "@/app/login/action";
+import { Login } from "@/app/login/action";
 const Page = () => {
   const initialState = {
     message: null,
   };
 
-  const [state, formAction] = useFormState(login, initialState);
+  const [state, formAction] = useFormState(Login, initialState);
 
   return (
     <div className="flex items-center justify-center h-screen">
