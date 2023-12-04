@@ -1,0 +1,146 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "skinx",
+    "dateExported": "2023-12-04T10:49:25.187Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "22e046dd-a94f-4f65-a39e-87f1c86a7cc9",
+            "colId": "c390ea7f-b5bd-4344-a0e5-18edc3af86c2",
+            "containerId": "",
+            "name": "get posts ",
+            "url": "localhost:3000/api/v1/posts?page=1&pageSize=10&search&sortBy=id&orderBy=asc&tag=directive,roar",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-12-02T14:09:38.827Z",
+            "modified": "2023-12-04T07:26:03.243Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTcwMTYwNTc3MiwiZXhwIjoxNzAxNjA5MzcyfQ.nhjNBv0gUYglTqY1yXWE0Lp5X_7ckLF9HzpHG863M8LlqwZB_L6JEHAbvSCzjbVUkWvwbUxs8wgV7nPCCiAFl_X4Q4bwhkLaUwSmdB6PiDNdP48QuAjssUV_RteHQCC1o54xJRrwr3o0RdQX0fKCcL1I3dpKQT834CgX0BzfYeHsugJ9nd4qkDZeTPOv3xl6z4KRy76A9wYKkN9bvAZW9-_sFx0TyZLiFKYC0zjr7akSGlb4NBo_UnHDwk6XEHGSGJaUQTGTJpvKgfPXiX27SlvHNrtTLefyCw8T4inAO1aVN1xLUG5Z8WAQoIjPUyUUYAHisZY_t7l06JaNyE97mM2cQ-seArDVv-nAPQcXrJdl2wHe_l2bDwTx0mOqY9IzMzRgo-kMJFfZRlM79BKYifzW4WkhzUOC33ItWIZGKcB7HcN5r3tdWeTrlqJbHNpFi2TFVIqUvruUZ7rVK2uWu2vSqBkVaCsRDYVgIdZ_LIQCae-f06gxYE_pVZ7B_6zTBkzKxKUyXkT9QkkZur5_WtQ-NYC37OzPfq9jdpOOYT7Qnmu6HFwhtRR6uzoRV-LsX502QRsQ_KfLjLhJ7c8cWuywl1lzfWETKQ3lVZeCxqYiadI_yv8tNFP95OW_SwUw3ipmnGW4f1SVTtAJ4rcPuJUbU9sQFVB2KW-jtg6YcQw"
+                }
+            ],
+            "params": [
+                {
+                    "name": "page",
+                    "value": "1",
+                    "isPath": false
+                },
+                {
+                    "name": "pageSize",
+                    "value": "10",
+                    "isPath": false
+                },
+                {
+                    "name": "search",
+                    "value": "",
+                    "isPath": false
+                },
+                {
+                    "name": "sortBy",
+                    "value": "id",
+                    "isPath": false
+                },
+                {
+                    "name": "orderBy",
+                    "value": "asc",
+                    "isPath": false
+                },
+                {
+                    "name": "tag",
+                    "value": "directive,roar",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "b7fac04d-3915-4e0f-bb15-6e285781d421",
+            "colId": "c390ea7f-b5bd-4344-a0e5-18edc3af86c2",
+            "containerId": "",
+            "name": "get post by id",
+            "url": "localhost:3000/api/v1/post?id=1",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-12-02T14:35:08.385Z",
+            "modified": "2023-12-03T13:29:49.938Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTcwMTYxMDE3OSwiZXhwIjoxNzAxNjEzNzc5fQ.ROAwmDMY_gBUhGoXkqhHZFhx6NV_lJOg3VPK_iK_-V-dnOV0FCFaYxZzuz5anx4RqQTmeguk09p7mJ4uNVl9_dwNQlMq63EDveexbkhMnHIZTLpXaO8jmSobaoCPoGz4BCQsTF4kHfYmKH_agp9olSoMU9JWJ_2jybuGV2arfaBND01vS-2g5k5DOxLQYt8QlVDsi8TNMgfTMG8WZjpQ55O9dK49S723Qo2VGIYcAAz2KJTwM8GiDfLmQ5T1UvCpP67imEPRuYvaXRBWC2S1rmJwtH1HImnJGoD_jJi_K-ZNhD23xz7UY4KzjpbCMVxkpeFMN1GALKqIYSOHTMgTaeo7-HWzAR4-pDbqsKXZhwkcdybczxnX8pDgIiRYpfT9SRx7Dvq0kXOAEk6rWXw6bqDW3tA882wTxvo_0LIr5FsE3oq4G8z1s2GV0BC55qVDFP-Rt2XLkq9zPj0XeL1otIxQ7nmf2B8POyAoMUmsQ1KHW-03-LieRoCZKL4EWb838m6N_OkqspZ_znTlEYTJKq44omm5YdLxJXzvIa0omC4WxaQePtnNybV6jq-CPWukXz3HEMSUIPNoE7datNUdVnQB7Dm4iy4bT2keQGzDNpN-XuVltCX8mcR79rxdQppvxTMnfJWtvmyGSQNR2ULLiFgYfmVW89clJfSOLNywbW4"
+                }
+            ],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "1",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "7c4d7e34-badb-4d2c-9094-7ab84aba716a",
+            "colId": "c390ea7f-b5bd-4344-a0e5-18edc3af86c2",
+            "containerId": "",
+            "name": "get tags",
+            "url": "localhost:3000/api/v1/tags",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-12-02T14:37:19.385Z",
+            "modified": "2023-12-03T09:44:47.077Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTcwMTU5NjY3NSwiZXhwIjoxNzAxNjAwMjc1fQ.O_6i49pK07gQXSqR-SgtxCnRwLRNKJeT-LpBRbjmdfZHjDGjWhdQZZW1tG1xfRPswVAWY2TYGZGk1SdTDte7pAPrZ4Hr147Fq3IvB7urxXkeBmfVAYOhZF8PtQ9bPaBi6CC474wcGDaRvxiyyPEt0gH-Ypgbzm4uj9Ow3oSSSNyQS53MR_tNyZLl0271CST1WzggKLhTHRZjKF59QVWI-754m1A0LqhB4Gia61u24lOCg14O3hgmFeV07z26yK0avU9_eewy-Z6PabmRWsjF0nFapKfqCTQwcbsrOA-dHDq3_3jEEXQSVYsm7Qxwp-K_7es6Uw0crWmaXi5Q1p-lCIP9EYzTk5--xk299HtDtkb6NUnW023gx74Jb_6OI16LgNOYSzEQBcBsqpRkJW6m7SnisC6vKoSwIG7WlZztwEmkpFyINoHstRosRegvRlEjktLdKRexUtp7SNbA_xW5Fv8fk4eL_WqGm_IwBgpZOFRKuS89TVUu95KLZf6VXUiy2gUHtgdiyyKPJcNictSeuSAionOdWhcSlCFADjd9n_i0JaeQNpQp8Ay0bhPJD5TMya36HjsOFFljUb6wWStyROKz929ZWRkMhtvukBGwm5bfv3ZjoDj5R_2kxzgcIAelOZt0lT2wEn9iyOnpzohaCejE8N2-eo9L7aODc1D-0-c"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "aa83a088-75d7-43f1-b664-bdbd34119161",
+            "colId": "c390ea7f-b5bd-4344-a0e5-18edc3af86c2",
+            "containerId": "",
+            "name": "signup",
+            "url": "localhost:3000/api/v1/signup",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2023-12-03T05:52:33.489Z",
+            "modified": "2023-12-03T05:52:33.489Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"admin\",\n  \"password\": \"admin\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "17069d6b-301c-4f6a-9efa-d77a83fceb93",
+            "colId": "c390ea7f-b5bd-4344-a0e5-18edc3af86c2",
+            "containerId": "",
+            "name": "login",
+            "url": "localhost:3000/api/v1/login",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2023-12-03T05:54:23.217Z",
+            "modified": "2023-12-03T10:47:35.000Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"admin\",\n  \"password\": \"admin\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ],
+    "settings": {
+        "options": {
+            "baseUrl": "https:://localhost:3000"
+        }
+    }
+}
