@@ -10,7 +10,8 @@ COPY . .
 # Installing dependencies
 RUN npm install
 RUN npx prisma generate
-RUN npx prisma db seed
+RUN npx prisma migrate dev
+RUN npx ts-node prisma/seed.ts
 
 # Starting our application
 CMD [ "npm", "start" ]

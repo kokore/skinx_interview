@@ -3,7 +3,7 @@
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
-export async function login(_prevState: any, formData: FormData) {
+export async function Login(_prevState: any, formData: FormData) {
   const username = formData.get("username");
   const password = formData.get("password");
 
@@ -22,7 +22,6 @@ export async function login(_prevState: any, formData: FormData) {
     if (!res.ok) {
       throw new Error("Failed to login");
     }
-
     res.json().then((data) => {
       cookies().set("jwt", data.token, { maxAge: 60 * 60 * 1000 });
     });
@@ -30,6 +29,5 @@ export async function login(_prevState: any, formData: FormData) {
     console.log("error", error);
     return { message: "Worng username or password" };
   }
-
   redirect("/");
 }

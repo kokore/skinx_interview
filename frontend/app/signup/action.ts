@@ -3,7 +3,7 @@
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
-export async function signup(_prevState: any, formData: FormData) {
+export async function Signup(_prevState: any, formData: FormData) {
   const username = formData.get("username");
   const password = formData.get("password");
 
@@ -22,7 +22,6 @@ export async function signup(_prevState: any, formData: FormData) {
     if (!res.ok) {
       throw new Error("Failed to signup");
     }
-
     res.json().then((data) => {
       cookies().set("jwt", data.token, { maxAge: 60 * 60 * 1000 });
     });
