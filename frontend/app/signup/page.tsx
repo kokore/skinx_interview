@@ -22,7 +22,7 @@ const Page = () => {
             <form action={formAction}>
               <div className="relative mt-6">
                 <input
-                  type="username"
+                  type="text"
                   name="username"
                   id="username"
                   placeholder="Username"
