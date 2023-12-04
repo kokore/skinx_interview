@@ -3,14 +3,17 @@ import { Post } from "../page";
 import { redirect } from "next/navigation";
 
 const getPost = async (id: string): Promise<Post> => {
-  const res = await fetch(`http://localhost:3000/api/v1/post?id=${id}`, {
-    method: "GET",
-    credentials: "include",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `${cookies().get("jwt")?.value}`,
-    },
-  });
+  const res = await fetch(
+    `http://${process.env.API_URI_DOCKER}:${process.env.API_PORT}/api/v1/post?id=${id}`,
+    {
+      method: "GET",
+      credentials: "include",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `${cookies().get("jwt")?.value}`,
+      },
+    }
+  );
 
   if (!res.ok) {
     redirect("/login");

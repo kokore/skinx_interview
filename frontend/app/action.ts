@@ -14,7 +14,9 @@ export async function posts(_prevState: any, formData: FormData) {
 
   try {
     const resPosts = await fetch(
-      `http://localhost:3000/api/v1/posts?page=${page}&pageSize=${pageSize}&search=${search}&sortBy=${sortBy}&orderBy=${orderBy}&tag=${tags.join(
+      `http://${process.env.API_URI_DOCKER}:${
+        process.env.API_PORT
+      }/api/v1/posts?page=${page}&pageSize=${pageSize}&search=${search}&sortBy=${sortBy}&orderBy=${orderBy}&tag=${tags.join(
         ","
       )}`,
       {
@@ -27,14 +29,17 @@ export async function posts(_prevState: any, formData: FormData) {
       }
     );
 
-    const resTags = await fetch(`http://localhost:3000/api/v1/tags`, {
-      method: "GET",
-      credentials: "include",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `${cookies().get("jwt")?.value}`,
-      },
-    });
+    const resTags = await fetch(
+      `http://${process.env.API_URI_DOCKER}:${process.env.API_PORT}/api/v1/tags`,
+      {
+        method: "GET",
+        credentials: "include",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `${cookies().get("jwt")?.value}`,
+        },
+      }
+    );
 
     if (!resPosts.ok || !resTags.ok) {
       redirect("/login");

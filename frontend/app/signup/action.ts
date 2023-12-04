@@ -8,13 +8,16 @@ export async function signup(_prevState: any, formData: FormData) {
   const password = formData.get("password");
 
   try {
-    const res = await fetch(`http://localhost:3000/api/v1/signup`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ username, password }),
-    });
+    const res = await fetch(
+      `http://${process.env.API_URI_DOCKER}:${process.env.API_PORT}/api/v1/signup`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ username, password }),
+      }
+    );
 
     if (!res.ok) {
       throw new Error("Failed to signup");
